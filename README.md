@@ -1,6 +1,6 @@
 # NeuroLingo Chrome Extension
 
-A Chrome extension built with the [Neuro Game SDK API](https://github.com/VedalAI/neuro-game-sdk/tree/main) that enables AI interaction with Duolingo. This extension allows Neuro to automatically detect and answer Duolingo questions through intelligent web scraping and automated actions.
+A Chrome extension built with the [Neuro Game SDK API](https://github.com/VedalAI/neuro-game-sdk/tree/main) that enables Neuro interaction with Duolingo. This extension allows Neuro to automatically detect and answer Duolingo questions through intelligent web scraping and automated actions.
 
 ## Features
 
