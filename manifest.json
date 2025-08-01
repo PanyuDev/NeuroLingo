@@ -1,0 +1,30 @@
+{
+  "manifest_version": 3,
+  "name": "Neuro-Duolingo Game",
+  "version": "1.0.0",
+  "description": "An extension to scrape Duolingo and allow interaction via the Neuro API.",  "permissions": [
+    "storage",
+    "webRequest"
+  ],
+  "host_permissions": [
+    "https://www.duolingo.com/*"
+  ],  "background": {
+    "service_worker": "src/background-main.js",
+    "type": "module"
+  },"content_scripts": [
+    {
+      "matches": [
+        "https://www.duolingo.com/*"
+      ],
+      "js": [
+        "src/dom-utils.js",
+        "src/context-extractor.js",
+        "src/actions.js",
+        "src/main.js"
+      ],      "css": [
+        "view/content.css"
+      ]
+    }  ],"action": {
+    "default_popup": "view/popup.html"
+  }
+}

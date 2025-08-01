@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Neuro-Duolingo Status</title>    <style>
+        body { font-family: sans-serif; margin: 16px; width: 400px; }
+        .status { margin-bottom: 12px; font-weight: bold; font-size: 16px; }
+        .status-details { margin-bottom: 16px; font-size: 14px; }
+        .status-details div { margin-bottom: 6px; }
+        .label { font-weight: 600; display: inline-block; width: 100px; }
+        .log-header { font-weight: 600; margin-bottom: 8px; }        .log { 
+            font-size: 12px; 
+            background: #f7f7f7; 
+            padding: 8px; 
+            border-radius: 4px; 
+            max-height: 250px; 
+            overflow-y: auto;
+            line-height: 1.4;
+        }
+        .log div { padding: 3px 0; border-bottom: 1px solid #eee; }
+        .log div:last-child { border-bottom: none; }
+        
+        /* Log level styling */
+        .log-entry.log-error { color: #c62828; background-color: #ffebee; }
+        .log-entry.log-warn { color: #ef6c00; background-color: #fff3e0; }
+        .log-entry.log-info { color: #1976d2; }
+        .log-entry.log-debug { color: #666; font-style: italic; }
+        
+        .connected { color: #2e7d32; }
+        .disconnected { color: #c62828; }
+        .unknown { color: #ff8f00; }
+    </style>
+</head>
+<body>
+    <div class="status" id="status">Connecting...</div>
+    <div class="status-details">
+        <div><span class="label">Neuro API:</span> <span id="neuro-status">Unknown</span></div>
+        <div><span class="label">Duolingo:</span> <span id="duolingo-status">Unknown</span></div>
+        <div><span class="label">Last Event:</span> <span id="last-event">None</span></div>
+    </div>    <div class="log-header">Activity Log:</div>
+    <div class="log" id="log"></div>
+    <script src="../src/popup.js"></script>
+</body>
+</html>
